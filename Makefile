@@ -1,4 +1,4 @@
-VERSION ?= 15488
+VERSION ?= 15560
 
 .PHONY: build
 build:
