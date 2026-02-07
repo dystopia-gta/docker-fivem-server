@@ -9,7 +9,7 @@ WORKDIR /opt/fivem
 
 ENV FIVEM_MASTER_URL="https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/"
 ARG FIVEM_VERSION
-RUN wget -q -nc --show-progress --progress=bar:force:noscroll ${FIVEM_MASTER_URL}$(wget -q -O - ${FIVEM_MASTER_URL} | grep ${FIVEM_VERSION} | head -n 1 | cut -d '"' -f 4 | cut -c 2-) && \
+RUN wget -q -nc --show-progress --progress=bar:force:noscroll ${FIVEM_MASTER_URL}$(wget -q -O - ${FIVEM_MASTER_URL} | grep panel | grep ${FIVEM_VERSION} | head -n 1 | cut -d '"' -f 4 | cut -c 2-) && \
   tar Jxfv fx.tar.xz && \
   rm -R fx.tar.xz
 
